@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171a35">
+  <meta name="description" content="Маленький цифровой подарок, сделанный с любовью.">
+  <title>LoveOS X — Anniversary Edition ♡</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="menu-left"><span class="apple">●</span><strong>LoveOS X</strong><span class="menu-item">Файл</span><span class="menu-item">Правка</span><span class="menu-item">Окно</span><span class="menu-item">Помощь</span></div>
+    <div class="menu-right"><span class="wifi">◔</span><span>♡</span><span id="clock">--:--</span></div>
+  </div>
+
+  <main class="desktop" id="desktop">
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-app="letter"><span class="icon-art pink">✉</span><span>Письмо тебе</span></button>
+      <button class="desktop-icon" data-app="memories"><span class="icon-art folder">♥</span><span>Наши моменты</span></button>
+      <button class="desktop-icon" data-app="gallery"><span class="icon-art photo">🐈</span><span>Котоплёнка</span></button>
+      <button class="desktop-icon" data-app="reasons"><span class="icon-art heart">♥</span><span>Почему ты</span></button>
+      <button class="desktop-icon" data-app="surprise"><span class="icon-art gift">🎁</span><span>Сюрприз.zip</span></button>
+    </div>
+
+    <section class="welcome-window glass-window" id="welcome-window">
+      <div class="titlebar">
+        <div class="traffic"><button class="close" aria-label="Закрыть"></button><button class="minimize" aria-label="Свернуть"></button><button class="zoom" aria-label="Развернуть"></button></div>
+        <div class="window-title">Добро пожаловать ♡</div><span class="title-spacer"></span>
+      </div>
+      <div class="welcome-content">
+        <div class="welcome-eyebrow">LOVEOS X · ANNIVERSARY EDITION</div>
+        <div class="hero-heart">♡</div>
+        <h1>Привет, солнышко!</h1>
+        <p class="lead">Я сделал для тебя маленький уголок интернета.<br>Здесь живут наши чувства, милые коты и кое-что ещё.</p>
+        <div class="anniversary-pill"><span>♥</span> Один месяц вместе <span>♥</span></div>
+        <button class="aqua-button pink-button" data-app="letter">Открыть моё письмо <span>→</span></button>
+        <p class="tiny-note">лучше всего исследовать всё, нажимая на иконки ♡</p>
+      </div>
+    </section>
+
+    <div class="desktop-note">a little world made just for you <span>✧</span></div>
+
+    <nav class="dock" aria-label="Приложения">
+      <button class="dock-app" data-app="home" title="Домой"><span class="dock-icon finder">⌘</span></button>
+      <i class="dock-divider"></i>
+      <button class="dock-app" data-app="letter" title="Письмо"><span class="dock-icon mail">✉</span></button>
+      <button class="dock-app" data-app="memories" title="Наши моменты"><span class="dock-icon photos">▧</span></button>
+      <button class="dock-app" data-app="gallery" title="Котоплёнка"><span class="dock-icon cat">🐱</span></button>
+      <button class="dock-app" data-app="reasons" title="Почему ты"><span class="dock-icon love">♥</span></button>
+      <button class="dock-app" data-app="surprise" title="Сюрприз"><span class="dock-icon present">🎁</span></button>
+      <i class="dock-divider"></i>
+      <button class="dock-app" data-app="meme" title="Мемы"><span class="dock-icon meme">☻</span></button>
+    </nav>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal-backdrop">
+    <section class="app-window glass-window" id="app-window" role="dialog" aria-modal="true" aria-labelledby="app-title">
+      <div class="titlebar">
+        <div class="traffic"><button class="close" id="app-close" aria-label="Закрыть"></button><button class="minimize" id="app-min" aria-label="Свернуть"></button><button class="zoom" id="app-zoom" aria-label="Развернуть"></button></div>
+        <div class="window-title" id="app-title">Окошко</div><span class="title-spacer"></span>
+      </div>
+      <div class="app-content" id="app-content"></div>
+    </section>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
