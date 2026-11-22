@@ -13,6 +13,9 @@ Open `config.js` and edit:
 - `letter`
 - `memories`
 - `reasons`
+- `ui` — names, labels, headings, boot text, notification messages and small interface copy
+- `rides` — bicycle memories/cards
+- `notificationsEnabled`, `notificationDelay`, `bootDuration` — optional effects timing
 
 You can add photos from your own relationship in `memories` or replace the example cat photos in `cats`.
 
@@ -35,8 +38,7 @@ Use images you own, have permission to use, or that are licensed for reuse. Keep
 1. Create a new GitHub repository, e.g. `loveos-anniversary`.
 2. Upload the **contents** of this folder to the repository root (make sure `index.html` is at the root).
 3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then Save.
+4. Under **Build and deployment**, choose **GitHub Actions** (the included workflow publishes the site).
 6. Wait for GitHub Pages to finish publishing. Your site URL will look like `https://YOUR-USERNAME.github.io/loveos-anniversary/`.
 
 The included `.nojekyll` file tells Pages to serve this static site as-is. GitHub Pages sites are publicly accessible, so do not put private photos or sensitive details on the site unless you are comfortable sharing them publicly.

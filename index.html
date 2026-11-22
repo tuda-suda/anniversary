@@ -9,37 +9,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="boot-screen" id="boot-screen"><div class="boot-card"><div class="boot-logo">♡</div><div class="boot-name">LoveOS X</div><div class="boot-subtitle" id="boot-subtitle">Подготавливаем котиков, сердечки и маршрут к твоему сердцу</div><div class="boot-track"><span></span></div><button id="skip-boot" class="boot-skip">Пропустить загрузку ♡</button></div></div>
   <div class="menu-bar">
-    <div class="menu-left"><span class="apple">●</span><strong>LoveOS X</strong><span class="menu-item">Файл</span><span class="menu-item">Правка</span><span class="menu-item">Окно</span><span class="menu-item">Помощь</span></div>
+    <div class="menu-left"><span class="apple">●</span><strong id="brand-label">LoveOS X</strong><span class="menu-item">Файл</span><span class="menu-item">Правка</span><span class="menu-item">Окно</span><span class="menu-item">Помощь</span></div>
     <div class="menu-right"><span class="wifi">◔</span><span>♡</span><span id="clock">--:--</span></div>
   </div>
 
   <main class="desktop" id="desktop">
     <div class="desktop-icons">
-      <button class="desktop-icon" data-app="letter"><span class="icon-art pink">✉</span><span>Письмо тебе</span></button>
-      <button class="desktop-icon" data-app="memories"><span class="icon-art folder">♥</span><span>Наши моменты</span></button>
-      <button class="desktop-icon" data-app="gallery"><span class="icon-art photo">🐈</span><span>Котоплёнка</span></button>
-      <button class="desktop-icon" data-app="reasons"><span class="icon-art heart">♥</span><span>Почему ты</span></button>
-      <button class="desktop-icon" data-app="surprise"><span class="icon-art gift">🎁</span><span>Сюрприз.zip</span></button>
+      <button class="desktop-icon" data-app="letter"><span class="icon-art pink">✉</span><span data-label="letter">Письмо тебе</span></button>
+      <button class="desktop-icon" data-app="memories"><span class="icon-art folder">♥</span><span data-label="memories">Наши моменты</span></button>
+      <button class="desktop-icon" data-app="gallery"><span class="icon-art photo">🐈</span><span data-label="gallery">Котоплёнка</span></button>
+      <button class="desktop-icon" data-app="reasons"><span class="icon-art heart">♥</span><span data-label="reasons">Почему ты</span></button>
+      <button class="desktop-icon" data-app="surprise"><span class="icon-art gift">🎁</span><span data-label="surprise">Сюрприз.zip</span></button>
+      <button class="desktop-icon" data-app="rides"><span class="icon-art bike">🚲</span><span data-label="rides">Наш велодневник</span></button>
     </div>
 
     <section class="welcome-window glass-window" id="welcome-window">
       <div class="titlebar">
         <div class="traffic"><button class="close" aria-label="Закрыть"></button><button class="minimize" aria-label="Свернуть"></button><button class="zoom" aria-label="Развернуть"></button></div>
-        <div class="window-title">Добро пожаловать ♡</div><span class="title-spacer"></span>
+        <div class="window-title" id="welcome-title">Добро пожаловать ♡</div><span class="title-spacer"></span>
       </div>
       <div class="welcome-content">
-        <div class="welcome-eyebrow">LOVEOS X · ANNIVERSARY EDITION</div>
+        <div class="welcome-eyebrow" id="welcome-edition">LOVEOS X · ANNIVERSARY EDITION</div>
         <div class="hero-heart">♡</div>
-        <h1>Привет, буся!</h1>
-        <p class="lead">Я сделал для тебя маленький уголок интернета.<br>Здесь живут наши чувства, милые коты и кое-что ещё.</p>
+        <h1>Привет, солнышко!</h1>
+        <p class="lead" id="welcome-lead">Я сделал для тебя маленький уголок интернета.</p>
         <div class="anniversary-pill"><span>♥</span> Один месяц вместе <span>♥</span></div>
-        <button class="aqua-button pink-button" data-app="letter">Открыть моё письмо <span>→</span></button>
-        <p class="tiny-note">лучше всего исследовать всё, нажимая на иконки ♡</p>
+        <button class="aqua-button pink-button" data-app="letter"><span id="welcome-button">Открыть моё письмо</span> <span>→</span></button>
+        <p class="tiny-note" id="welcome-note">Исследуй всё, нажимая на иконки. Тут безопасно, кроме уровня милоты ♡</p>
       </div>
     </section>
 
-    <div class="desktop-note">a little world made just for you <span>✧</span></div>
+    <div class="desktop-note" id="desktop-note">счастье — это ехать рядом <span>✧</span></div><div class="bike-stamp">🚲 <span>together is the best direction</span></div>
 
     <nav class="dock" aria-label="Приложения">
       <button class="dock-app" data-app="home" title="Домой"><span class="dock-icon finder">⌘</span></button>
@@ -51,10 +53,12 @@
       <button class="dock-app" data-app="surprise" title="Сюрприз"><span class="dock-icon present">🎁</span></button>
       <i class="dock-divider"></i>
       <button class="dock-app" data-app="meme" title="Мемы"><span class="dock-icon meme">☻</span></button>
+      <button class="dock-app" data-app="rides" title="Велодневник"><span class="dock-icon bike-dock">🚲</span></button>
     </nav>
   </main>
 
   <div class="toast" id="toast" role="status"></div>
+  <aside class="notification" id="notification" role="status" aria-live="polite"><div class="notification-icon">♡</div><div><strong id="notification-title">Уведомление от Купидона</strong><p id="notification-message"></p></div><button id="notification-close" aria-label="Закрыть уведомление">×</button></aside>
   <div class="modal-backdrop" id="modal-backdrop">
     <section class="app-window glass-window" id="app-window" role="dialog" aria-modal="true" aria-labelledby="app-title">
       <div class="titlebar">
