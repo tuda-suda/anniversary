@@ -65,3 +65,43 @@ button,a{cursor:pointer}
 .dock-app,.dock-divider{flex:0 0 auto}
 @media(max-width:600px){.desktop{height:calc(100dvh - 30px);min-height:0}.dock{justify-content:flex-start;left:10px;right:10px;transform:none;gap:2px}.dock-app{width:39px;height:43px}.dock-icon{width:35px;height:35px;font-size:19px}.dock-divider{margin-left:1px;margin-right:1px}.desktop-note{bottom:75px;max-width:45%;line-height:1.5}}
 @media(max-width:380px){.dock-app{width:35px}.dock-icon{width:32px;height:32px;font-size:17px}.dock-divider{height:28px}}
+
+
+/* Cat gallery: Pinterest-style masonry with uncropped images */
+.cat-grid {
+  display: block;
+  column-count: 3;
+  column-gap: 12px;
+}
+
+.cat-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 12px;
+  break-inside: avoid;
+  vertical-align: top;
+}
+
+.cat-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: linear-gradient(135deg, #fff7fb, #f3eef8);
+}
+
+@media (max-width: 700px) {
+  .cat-grid {
+    column-count: 2;
+    column-gap: 10px;
+  }
+
+  .cat-card {
+    margin-bottom: 10px;
+  }
+
+  .cat-card img {
+    height: auto;
+  }
+}
